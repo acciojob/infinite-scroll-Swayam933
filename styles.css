@@ -7,7 +7,7 @@ body {
 
 #infi-list {
     width: 300px;
-    height: 400px;
+    height: 300px;
     overflow-y: scroll;
     border: 1px solid #ccc;
     border-radius: 5px;
