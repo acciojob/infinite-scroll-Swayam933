@@ -1,5 +1,4 @@
-const container = document.getElementById("container");
-const list = document.getElementById("list");
+const list = document.getElementById("infi-list");
 
 let itemCount = 0;
 
@@ -16,9 +15,9 @@ function addItems(count) {
 addItems(10);
 
 // Load 2 more items when user scrolls to the end
-container.addEventListener("scroll", function () {
+list.addEventListener("scroll", function () {
     const scrolledToBottom =
-        container.scrollTop + container.clientHeight >= container.scrollHeight - 5;
+        list.scrollTop + list.clientHeight >= list.scrollHeight - 5;
 
     if (scrolledToBottom) {
         addItems(2);
