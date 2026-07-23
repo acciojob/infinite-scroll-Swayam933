@@ -7,19 +7,24 @@ function addItems(count) {
         itemCount++;
         const li = document.createElement("li");
         li.textContent = "Item " + itemCount;
+        li.className = "list-item";
         list.appendChild(li);
     }
 }
 
-// Add 10 items by default
 addItems(10);
 
-// Load 2 more items when user scrolls to the end
+let loading = false;
+
 list.addEventListener("scroll", function () {
+    if (loading) return;
+
     const scrolledToBottom =
-        list.scrollTop + list.clientHeight >= list.scrollHeight - 5;
+        list.scrollTop + list.clientHeight >= list.scrollHeight - 10;
 
     if (scrolledToBottom) {
+        loading = true;
         addItems(2);
+        loading = false;
     }
 });
