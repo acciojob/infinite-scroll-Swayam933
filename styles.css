@@ -1,15 +1,18 @@
 #infi-list {
     width: 300px;
-    height: 300px;
+    height: 250px;
     overflow-y: scroll;
     border: 1px solid #ccc;
     border-radius: 5px;
     list-style: none;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 #infi-list li {
+    box-sizing: border-box;
     padding: 15px;
     border-bottom: 1px solid #eee;
+    line-height: 20px;
 }
